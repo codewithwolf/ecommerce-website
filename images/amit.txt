@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+              <div class="text">
+                  <h1>hey.... please use me now </h1>
+                  <div class="tes">
+                      <img src="/emoji.png.jpg" alt="">
+                  </div>
+              </div>
+        <table class="table-row">
+        <tr>
+            <td colspan="3"><input type="text" id="result"></td>
+            <td><input type="button" value="c" class="table" onclick="clr('c')"></td>
+
+        </tr>
+        <tr>
+            <td><input type="button" value="1" class="table" onclick="display('1')"></td>
+            <td><input type="button" value="2" class="table" onclick="display('2')"></td>
+            <td><input type="button" value="3" class="table" onclick="display('3')"></td>
+            <td><input type="button" value="4" class="table" onclick="display('4')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="5" class="table" onclick="display('5')"></td>
+            <td><input type="button" value="6" class="table" onclick="display('6')"></td>
+            <td><input type="button" value="7" class="table" onclick="display('7')"></td>
+            <td><input type="button" value="8" class="table" onclick="display('8')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="9" class="table" onclick="display('9')"></td>
+            <td><input type="button" value="0" class="table" onclick="display('0')"></td>
+            <td><input type="button" value="+" class="table" onclick="display('+')"></td>
+            <td><input type="button" value="-" class="table" onclick="display('-')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="*" class="table" onclick="display('*')"></td>
+            <td><input type="button" value="/" class="table" onclick="display('/')"></td>
+            <td><input type="button" value="=" class="table" onclick="equate()"></td>
+            <td><input type="button" value="." class="table" onclick="display('.')"></td>
+        </tr>
+    </table>
+    </div>
+    <script>
+           
+        function display(val){
+            document.getElementById ('result').value+=val;
+        }
+         function  clr( ) {
+             document.getElementById ('result').value = ""
+         }
+         function  equate() {
+            let x = document.getElementById('result').value;
+            let y= eval(x)
+            document.getElementById ('result').value=y
+        }
+    </script>
+     
+</body>
+</html>
+*{
+    margin: 0;
+    padding: 0;
+}
+ 
+ 
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(/back-5.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-direction: column;
+}
+ .table-row{
+     border: 2px solid silver;
+     border-radius: 9px;
+ }
+ tr .table{
+     height: 3rem;
+     width: 3rem;
+     margin: 3px 5px;
+     background-color: orange;
+     border: 1px solid orange;
+     border-radius: 7px;
+ }
+ #result{
+     height: 3rem;
+     width: 12rem;
+     border-radius: 13px;
+     border: 2px solid orange;
+ }
+ span{
+     font-size: 67px;
+ }
+ .text h1{
+     color: wheat;
+     font-size:3rem;
+     margin: 4rem;
+ }
+   .tes img{
+       width: 12px;
+       height: 12px;
+   }
