@@ -4,6 +4,28 @@
      box-sizing: border-box;
      font-family: 'Lato', sans-serif;
  }
+ #animate{
+    background-color: black;
+    color: white;
+    width:222px;
+    animation: aagepiche 0.9s linear infinite;
+    animation-direction: alternate;
+    font-size: 23PX;
+}
+ #aim{
+     font-weight: bolder;
+      
+ }
+ 
+@keyframes aagepiche{
+    from{
+        padding-left: 62px;
+      }
+      to{
+          padding-right: 90px;
+      }
+}
+  
   
   
    #home{
@@ -108,4 +130,15 @@
          }
        
 
-  
+         
+       
+        
+      
+      
+      
+      
+      
+      
+      
+      
+     
